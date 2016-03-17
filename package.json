@@ -1,6 +1,6 @@
 {
   "name": "paginate-dates",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Paginate by date ranges instead of record counts.",
   "homepage": "https://github.com/icanjs/paginate-dates",
   "author": {
