@@ -333,3 +333,14 @@ QUnit.test('Testing day-based intervals.', function(){
   QUnit.equal(vm.attr('startDate').format('MMM D'), 'Mar 6');
   QUnit.equal(vm.attr('endDate').format('MMM D'), 'Mar 6');
 });
+
+QUnit.test('Testing numberOfDays.', function(){
+  var vm = new ViewModel({
+    targetDate: '3/11/2016',
+    interval: 'days',
+    multiplier: 5,
+    projectionType: 'forward'
+  });
+  QUnit.equal(vm.attr('numberOfDays'), 5);
+
+});

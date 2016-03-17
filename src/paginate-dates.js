@@ -40,8 +40,8 @@ export const ViewModel = Map.extend({
     },
     numberOfDays: {
       get(){
-        let start = this.attr('startOfFirstWeek'),
-          end = this.attr('endOfLastWeek');
+        let start = this.attr('startDate'),
+          end = this.attr('endDate');
         return end.clone().diff(start, 'days') + 1;
       }
     },
