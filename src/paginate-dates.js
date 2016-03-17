@@ -38,6 +38,13 @@ export const ViewModel = Map.extend({
         }
       }
     },
+    numberOfDays: {
+      get(){
+        let start = this.attr('startOfFirstWeek'),
+          end = this.attr('endOfLastWeek');
+        return end.clone().diff(start, 'days') + 1;
+      }
+    },
     projectionType: {
       value: 'back',
       set(val){
