@@ -342,5 +342,18 @@ QUnit.test('Testing numberOfDays.', function(){
     projectionType: 'forward'
   });
   QUnit.equal(vm.attr('numberOfDays'), 5);
+});
 
+QUnit.test('Can set the targetDate.', function(){
+  var vm = new ViewModel({
+    targetDate: '3/11/2016',
+    interval: 'days',
+    multiplier: 1
+  });
+  vm.setTargetDate('5/15/2012');
+  QUnit.equal(
+    vm.attr('targetDate').format('MMM DD, YYYY'),
+    'May 15, 2012',
+    'targetDate was directly set to May 15, 2012.'
+  );
 });
